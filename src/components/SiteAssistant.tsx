@@ -298,7 +298,7 @@ export function SiteAssistant() {
         </section>
       )}
 
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col items-end gap-2">
         <a
           href={whatsappHref(lastQuestion ? `Hello TechnovAIte — ${lastQuestion}` : undefined)}
           target="_blank"
