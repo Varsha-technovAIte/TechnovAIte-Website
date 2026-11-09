@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { AnnouncementBar } from "@/components/home/AnnouncementBar";
 import { Header } from "@/components/Header";
 import { RevealObserver } from "@/components/RevealObserver";
+import { SiteAssistant } from "@/components/SiteAssistant";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <SiteAssistant />
         <RevealObserver />
       </body>
     </html>

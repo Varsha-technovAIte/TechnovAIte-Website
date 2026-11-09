@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav, site } from "@/lib/site";
+import { nav, site, whatsappHref } from "@/lib/site";
 import { Logo } from "./Logo";
 import { Container } from "./ui";
 
@@ -23,6 +23,11 @@ export function Footer() {
               <li>
                 <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="hover:text-white">
                   {site.contact.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  WhatsApp
                 </a>
               </li>
               <li>

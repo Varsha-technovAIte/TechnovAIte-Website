@@ -11,10 +11,16 @@ export const site = {
     email: "adarsh.a@technovaite.com",
     phone: "+61 434 689 415",
     phoneDisplay: "(+61) 0434 689 415",
+    /** International WhatsApp number, no plus or leading zero. */
+    whatsapp: "61434689415",
   },
   // TODO: confirm the official LinkedIn company URL before launch.
   linkedin: "https://www.linkedin.com/company/technovaite",
 };
+
+export function whatsappHref(text = "Hello TechnovAIte — I'd like to talk about a technology capability.") {
+  return `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(text)}`;
+}
 
 export type NavItem = { label: string; href: string; description?: string };
 export type NavGroup = { label: string; href: string; mega?: boolean; items: NavItem[] };
