@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { nav, type NavGroup } from "@/lib/site";
-import { Logo } from "./Logo";
+import { Logo, SolvrrLabel } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { Arrow, Button, cn } from "./ui";
 
@@ -128,7 +128,7 @@ export function Header() {
                         expanded || active ? "text-ink" : "text-slate hover:text-ink",
                       )}
                     >
-                      {group.label}
+                      <SolvrrLabel text={group.label} />
                       <Chevron open={expanded} />
                       {active && (
                         <span aria-hidden className="absolute inset-x-3.5 -bottom-0.5 h-[2px] rounded-full bg-brand" />
@@ -157,7 +157,7 @@ export function Header() {
                                     href={item.href}
                                     className="block rounded-xl p-3 transition-colors hover:bg-mist"
                                   >
-                                    <span className="block text-sm font-semibold text-ink">{item.label}</span>
+                                    <span className="block text-sm font-semibold text-ink"><SolvrrLabel text={item.label} /></span>
                                     {item.description && (
                                       <span className="mt-1 block text-[13px] leading-snug text-slate">
                                         {item.description}
@@ -192,7 +192,7 @@ export function Header() {
                                   href={item.href}
                                   className="block rounded-xl px-3 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-mist"
                                 >
-                                  {item.label}
+                                  <SolvrrLabel text={item.label} />
                                 </Link>
                               </li>
                             ))}
@@ -249,7 +249,7 @@ export function Header() {
                     onClick={() => setMobileSection(expanded ? null : group.label)}
                     className="flex w-full items-center justify-between py-4 text-lg font-semibold"
                   >
-                    {group.label}
+                    <SolvrrLabel text={group.label} />
                     <Chevron open={expanded} />
                   </button>
                   <ul className={cn("grid gap-1 pb-4", !expanded && "hidden")}>
@@ -260,7 +260,7 @@ export function Header() {
                           onClick={() => setMobileOpen(false)}
                           className="block rounded-lg px-3 py-2 text-slate hover:bg-mist hover:text-ink"
                         >
-                          {item.label}
+                          <SolvrrLabel text={item.label} />
                         </Link>
                       </li>
                     ))}

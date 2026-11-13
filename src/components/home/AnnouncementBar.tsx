@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SolvrrMark } from "@/components/Logo";
 import { Arrow } from "@/components/ui";
 
 const KEY = "tn-announce-dismissed";
@@ -21,7 +22,9 @@ export function AnnouncementBar() {
         href="/solvrr"
         className="group flex h-11 items-center justify-center gap-2 px-12 text-center text-[13.5px] font-medium tracking-[-0.01em]"
       >
-        Solvrr™ — a clearer way to structure technology decisions
+        <SolvrrMark className="h-5" />
+        <span aria-hidden className="h-3.5 w-px bg-on-inverse/25" />
+        A clearer way to structure technology decisions
         <Arrow className="h-3.5 w-3.5" />
       </Link>
       <button

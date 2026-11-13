@@ -7,7 +7,7 @@ export function SolvrrConcept({ className }: { className?: string }) {
     <figure className={cn("relative", className)}>
       <div aria-hidden className="overflow-hidden rounded-3xl border border-white/10 bg-[#0f2240] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]">
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
-          <SolvrrMark dark className="text-base" />
+          <SolvrrMark dark className="h-7" />
           <span className="rounded-full bg-brand/15 px-2.5 py-1 text-[11px] font-medium text-brand ring-1 ring-brand/30">
             Platform concept
           </span>

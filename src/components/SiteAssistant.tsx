@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { businessNeeds, capabilities, orchestrationNodes, site, whatsappHref } from "@/lib/site";
+import { SolvrrLabel } from "./Logo";
 import { cn } from "./ui";
 
 type LinkItem = { label: string; href: string };
@@ -243,7 +244,7 @@ export function SiteAssistant() {
                       {message.links.map((link) => (
                         <li key={link.href}>
                           <Link href={link.href} className="font-medium text-brand-strong underline-offset-2 hover:underline" onClick={() => setOpen(false)}>
-                            {link.label}
+                            <SolvrrLabel text={link.label} />
                           </Link>
                         </li>
                       ))}

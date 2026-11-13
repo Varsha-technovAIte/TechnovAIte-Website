@@ -2,6 +2,7 @@
 
 import { useId, useRef, useState } from "react";
 import Link from "next/link";
+import { SolvrrLabel, SolvrrMark } from "@/components/Logo";
 import { Arrow, cn } from "@/components/ui";
 
 const tabs = [
@@ -75,7 +76,7 @@ export function SignalBoard() {
                 on ? "bg-inverse text-on-inverse" : "bg-mist text-slate hover:text-ink",
               )}
             >
-              {item.label}
+              <SolvrrLabel text={item.label} />
             </button>
           );
         })}
@@ -157,6 +158,7 @@ function SolvrrPanel() {
   ];
   return (
     <div className="grid gap-3">
+      <SolvrrMark className="mb-1 h-10 justify-self-start text-ink" />
       {pillars.map(([title, copy], i) => (
         <div key={title} className="flex gap-4 rounded-2xl bg-paper p-4 shadow-card ring-1 ring-line">
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-deep text-xs font-semibold text-white">

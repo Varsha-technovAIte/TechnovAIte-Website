@@ -59,7 +59,7 @@ export default function SolvrrPage() {
         <div aria-hidden className="absolute left-1/2 top-[-200px] h-[480px] w-[900px] -translate-x-1/2 rounded-full bg-brand/20 blur-3xl" />
         <Container className="relative pb-20 pt-16 sm:pt-24">
           <div className="mx-auto max-w-3xl text-center">
-            <SolvrrMark dark className="text-4xl" />
+            <SolvrrMark dark className="h-16 sm:h-20" />
             <div className="mt-8">
               <Eyebrow dark>Solvrr™ by TechnovAIte</Eyebrow>
             </div>

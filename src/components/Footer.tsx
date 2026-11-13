@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { nav, site, whatsappHref } from "@/lib/site";
-import { Logo } from "./Logo";
+import { Logo, SolvrrLabel } from "./Logo";
 import { Container } from "./ui";
 
 export function Footer() {
@@ -43,12 +43,12 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
             {nav.map((group) => (
               <div key={group.label}>
-                <h2 className="text-sm font-semibold text-white">{group.label}</h2>
+                <h2 className="text-sm font-semibold text-white"><SolvrrLabel text={group.label} /></h2>
                 <ul className="mt-4 space-y-2.5">
                   {group.items.map((item) => (
                     <li key={item.href}>
                       <Link href={item.href} className="text-sm text-white/60 transition-colors hover:text-white">
-                        {item.label}
+                        <SolvrrLabel text={item.label} />
                       </Link>
                     </li>
                   ))}
